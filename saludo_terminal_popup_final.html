@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Saludo Terminal Animado</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 40px;
+      font-size: 1.3em;
+    }
+    .typewriter-text {
+      white-space: pre-wrap;
+      border-right: .15em solid #00ff00;
+      overflow: hidden;
+      animation: typing 35s steps(300, end), blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #00ff00; }
+    }
+  </style>
+</head>
+<body>
+<style>
+  .hack-warning-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: black;
+    color: red;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: flash 1s infinite;
+    z-index: 9999;
+    text-align: center;
+  }
+
+  @keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+</style>
+
+<div class="hack-warning-container" id="hack-warning">
+  ⚠️ HAS SIDO HACKEADA ⚠️<br>🗓️ 30 de junio del 2025
+</div>
+
+<script>
+  setTimeout(() => {
+    document.getElementById('hack-warning').style.display = 'none';
+    document.querySelector('.typewriter-text').style.display = 'block';
+  }, 6000); // 6 segundos de pantalla de hackeo
+</script>
+
+  <div class="typewriter-text" style="display:none;">
+┌──(kali㉿naval-terminal)-[~/home/calichin/scripts]
+<span style="color:#ffaa00;">└─$ sudo ./felicitar_teniente.sh --target="JOSELIN MERCEDES BARBA CHÁVEZ" --rango="Teniente Primero"</span>
+
+<span style="color: #00ff00;">[✔] Acceso root concedido.</span>
+<span style="color: #00ffff;">[INFO] Conectando con protocolo MARINA-2025...</span>
+<span style="color: #00ffcc;">[OK] Identidad confirmada: Teniente Primero JOSELIN MERCEDES BARBA CHÁVEZ</span>
+<span style="color: #00ffff;">[INFO] Verificando historial de méritos...</span>
+<span style="color: #00ff00;">[✔] Fortaleza. Liderazgo. Lealtad. Empatía. Vocación.</span>
+
+<span style="color: #00ffff;">[INFO] Ejecutando módulo saludo protocolar...</span>
+<span style="color:#ff66cc;">
+Hoy no solo cumple años una mujer,
+sino una fuerza.
+Una voluntad que se forjó entre mareas y madrugadas,
+entre maniobras y silencios que solo los de uniforme entienden.
+
+Tú no naciste para seguir la corriente,
+naciste para abrir rutas en el agua y en la vida.
+Llevas el honor en la espalda como quien carga el fusil: con firmeza, sin quejarse,
+como si fuera parte de la piel.
+
+Y sin embargo, también sabes de ternura.
+De palabras que desarman más que las armas.
+De miradas que consuelan mejor que una orden directa.
+De ese coraje distinto, el que no hace ruido,
+el que se demuestra estando… siempre.
+
+Hoy quiero que el mar te celebre,
+que los barcos se alineen en tu nombre,
+que el viento te traiga memorias bonitas,
+y que tu corazón, tan disciplinado, se permita también sentirse niña por un rato.
+</span>
+<span style="color:#ffff00;">Feliz cumpleaños, mi teniente.</span>
+Que la patria siempre te honre,
+pero que también la vida te abrace con justicia.
+
+Con admiración profunda y lealtad que no necesita formación,
+
+<span style="color:#ff9999;">Un calichín que te estima más allá del reglamento.</span>
+
+<span style="color: #00ff00;">└─$ echo "Transmisión finalizada. Saludo entregado con éxito."</span>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  setTimeout(() => {
+    const duration = 6000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 6,
+        angle: 90,
+        spread: 70,
+        origin: { x: Math.random(), y: 1 },
+        colors: ['#ff69b4', '#87cefa', '#90ee90', '#ffff00']
+      });
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  }, 37000); // iniciar después de 37s (tiempo de animación del texto)
+</script>
+
+<script>
+  setTimeout(() => {
+    alert(`echo "Hoy no solo celebramos un año más..."
+echo "Celebramos a una oficial que reescribe cada línea del destino con liderazgo y fuego en la mirada."
+echo "Teniente, usted no envejece... actualiza su versión."
+
+[⚓] ¡FELIZ CUMPLEAÑOS, TENIENTE!
+[⚓] Que este nuevo ciclo venga con nuevas misiones, menos errores y más recompensas.
+
+#CalichínPerú - 30/06/2025`);
+  }, 45000); // aparece al final (después de animación y confetti)
+</script>
+</body>
+
+
+</html>
